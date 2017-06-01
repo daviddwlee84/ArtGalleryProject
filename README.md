@@ -23,7 +23,6 @@ The final project of Database Design.
 ### Server
 - [X] Basic Login System
 - [ ] Database Connection
-- ...
 
 ### Website
 
@@ -51,6 +50,10 @@ The final project of Database Design.
 * Jimmy Zhang
 
 ## Memo
-### Github md file
+### Github md File
 * [Basic writing and formatting syntax](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
 * [Creating and highlighting code blocks](https://help.github.com/articles/creating-and-highlighting-code-blocks/)
+
+### Github Flow
+* [Hello World](https://guides.github.com/activities/hello-world/)
+* [Understanding the GitHub Flow](https://guides.github.com/introduction/flow/)
