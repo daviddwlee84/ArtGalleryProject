@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{ title }}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <h1>Hello {{name}}!</h1>
+    <h3>id = zzz, pwd = 0000</h3>
+    <div>
+        <ul>
+            <li><a href="/page2">page2</a></li>
+            <li><a href="/page3">page3</a></li>
+            <li><a href="/page4">page4</a></li>
+        </ul>
+    </div>
+    <form action='/login' method="POST">
+        <div>
+            <label>ID:</label>
+            <input type="text" name="id" value="">
+        </div>
+        <div>
+            <label>PASSWORD:</label>
+            <input type="text" name="pwd" value="">
+        </div>
+        <div>
+            <input type="submit" value='go'>
+        </div>
+    </form>
+	<form action='/logout' method="POST">
+		<div>
+			<input type = "submit" value='logout la!!'>
+		</div>
+	</form>
+
+</body>
+
+</html>
