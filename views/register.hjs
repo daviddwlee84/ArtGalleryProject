@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>{{ title }}</title>
+	<link rel='stylesheet' href='/style.css' />
+</head>
+
+<body>
+	<h1> Please insert your personal data. </h1>
+	<div>
+		<form action='/register' method="POST">
+			<div>
+				<label>ID:</label>
+				<input type="text" name="id">
+			</div>
+			<div>
+				<label>Password:</label>
+				<input type="password" name="psw">
+			</div>
+			<div>
+				<label>Name:</label>
+				<input type="text" name="name">
+			</div>
+			<div>
+				<label>Phone:</label>
+				<input type="text" name="phone">
+			</div>
+			<div>
+				<label>Addr:</label>
+				<input type="text" name="addr">
+			</div>
+			<div>
+				<label>SSN:</label>
+				<input type="text" name="ssn">
+			</div>
+			<div>
+				<input type="submit" value="Submit">
+				<input type="reset">
+			</div>
+		</form>
+	</div>
+</body>
+
+
