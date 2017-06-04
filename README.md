@@ -22,11 +22,11 @@ The final project of Database Design.
 ## Todo List
 ### Server
 - [X] Basic Login System
-- [ ] Database Connection
+- [X] Basic Database Connection
 
 ### Website
 
-- [ ] User Register Page
+- [X] User Register Page
 
 	### Reports
 	- [ ] Unsold Work Page (including bargain mechanism)
@@ -57,3 +57,7 @@ The final project of Database Design.
 ### Github Flow
 * [Hello World](https://guides.github.com/activities/hello-world/)
 * [Understanding the GitHub Flow](https://guides.github.com/introduction/flow/)
+
+#### Github Tip
+* Push local master to remote branch `git push origin master:<remote branch name>`
+* [Git pull and keep local changes]{https://stackoverflow.com/questions/10414769/git-pull-keeping-local-changes}
