@@ -26,6 +26,14 @@ router.post('/logout', function(req, res, next) {
 });
 
 
+
+// Register Page
+router.get('/register', function(req, res, next) {
+	res.render('register', { title: "FUCK ME BITCH"});
+});
+
+
+
 module.exports = router;
 
 
