@@ -32,7 +32,7 @@ The final project of Database Design.
 	- [X] Unsold Work Page
 		- [ ] Bargain mechanism
 	- [X] List All Artist Page
-	- [ ] List All Customer Page
+	- [X] List All Customer Page
 
 
 	### Receipt
