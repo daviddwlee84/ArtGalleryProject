@@ -31,7 +31,7 @@ The final project of Database Design.
 	### Reports
 	- [X] Unsold Work Page
 		- [ ] Bargain mechanism
-	- [ ] List All Artist Page
+	- [X] List All Artist Page
 	- [ ] List All Customer Page
 
 
@@ -41,8 +41,8 @@ The final project of Database Design.
 	- [ ] Works for Sale Upload Page
 	
 		#### User 
-		- [ ] Artist Report Page
-		- [ ] Salesperson Page (show the Performance)
+		- [X] Artist Report Page
+		- [X] Salesperson Page (show the Performance)
 	
 
 
