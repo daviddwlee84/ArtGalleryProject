@@ -7,6 +7,8 @@ The final project of Database Design.
 
  **Database** - MySQL
  
+ [Relational Diagram](https://drive.google.com/file/d/0B0Lm7ZZWUYUJS1AwWTdBM3NYSGs/view?usp=sharing)
+ 
  **Webserver** - Node.js + Express
 
 
@@ -18,6 +20,17 @@ The final project of Database Design.
 
 ## Start Server
 `nodemon` in the main directory
+
+## Default Database Setup
+
+Go to Database directory `cd Database`
+
+1. Create Database `node Create_DB.js`
+1. Create Tables `node Create_Table.js`
+1. Insert testing data (optional)
+	1. `node Insert_Console.js`
+	1. Copy paste the "*.txt" filenames listed in *Index.txt*
+	1. After finishing. Terminate it by Ctrl + C
 
 ## Todo List
 ### Server
@@ -47,8 +60,8 @@ The final project of Database Design.
 
 
 ## Contributor
-* David Lee
-* Jimmy Zhang
+* David Lee - Website Front-end and Back-end
+* Jimmy Zhang - Database
 
 ## Memo
 ### Github md File
