@@ -29,7 +29,8 @@ The final project of Database Design.
 - [X] User Register Page
 
 	### Reports
-	- [ ] Unsold Work Page (including bargain mechanism)
+	- [X] Unsold Work Page
+		- [ ] Bargain mechanism
 	- [ ] List All Artist Page
 	- [ ] List All Customer Page
 
