@@ -93,8 +93,47 @@ var renderArtist = function(obj) {
     return view;
 }
 
+/* Require 5 Customer */
 
-// Require9 list artist report
+router.get('/Customers', function(req, res, next){
+	connection.query('SELECT U_Name, U_Address, U_Phone, U_MoneyBuy_LastYear, U_MoneyBuy_ThisYear FROM User ORDER BY U_Name ASC', function(err, result, fields) {
+		if (err) throw err;
+		res.render('customer', {title: "Customer", data: renderCustomer(result)});
+	});
+});
+
+var renderCustomer = function(obj) {
+    if (Object.prototype.toString.call(obj) !== '[object Array]')
+        throw new Error('invalid data type, expected an array');
+    var view = '';
+
+	view += `<div>`
+	view += `<table>
+				<thead>
+					<th>Name</th>
+					<th>U_Address</th>
+					<th>U_Phone</th>
+					<th>U_MoneyBuy_LastYear</th>
+					<th>U_MoneyBuy_ThisYear</th>
+				</thead>
+			<tbody>`
+
+    obj.map((o, i) => {
+        view += `<tr>
+					<td>${o.U_Name}</td>
+					<td>${o.U_Address}</td>
+					<td>${o.U_Phone}</td>
+					<td>${o.U_MoneyBuy_LastYear}</td>
+					<td>${o.U_MoneyBuy_ThisYear}</td>
+				</tr>`
+	});
+
+	view += `</tbody></table></div>`
+    return view;
+}
+
+
+/* Require 9 list artist report */
 
 router.get('/ArtistsReport', function(req, res, next){
 	connection.query('SELECT * FROM require9', function(err, result, fields) {
@@ -102,8 +141,6 @@ router.get('/ArtistsReport', function(req, res, next){
 		res.render('artists_report', {title: "Artists Report", data: renderArtistReport(result)});
 	});
 });
-
-
 
 var renderArtistReport = function(obj) {
     if (Object.prototype.toString.call(obj) !== '[object Array]')
