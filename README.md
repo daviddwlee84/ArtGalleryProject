@@ -30,7 +30,7 @@ The final project of Database Design.
 
 	### Reports
 	- [X] Unsold Work Page
-		- [X] Bargain mechanism
+		- [ ] Bargain mechanism
 	- [ ] List All Artist Page
 	- [ ] List All Customer Page
 
