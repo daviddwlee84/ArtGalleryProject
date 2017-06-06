@@ -6,7 +6,7 @@ var connection = mysql.createConnection({
 	host: 'localhost',
 	user: 'root',
 	password: '1234',
-	database: 'ArtGallery'
+	database: 'Gallery_DB'
 });
 
 connection.connect();
@@ -16,7 +16,7 @@ connection.connect();
 // Register Function
 router.post('/', function(req, res, next) {
 	console.log(req.body);
-	var sql = `INSERT INTO User (ID, Password, Name, Phone, Addr, SSN) VALUES (${req.body.id}, ${req.body.psw}, ${req.body.name}, ${req.body.phone}, ${req.body.addr}, ${req.body.ssn})`;
+	var sql = `INSERT INTO User(U_ID, U_Password, U_SSN, U_Name, U_Address, U_Phone) VALUES (${req.body.id}, ${req.body.psw},${req.body.ssn}, ${req.body.name}, ${req.body.addr}, ${req.body.phone})`;
 	
 	connection.query(sql, function (err, result) {
     	if (err) throw err;

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>{{ title }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+	<div>
+		<h1> Hi {{ current_user }} You are buying {{ title }} </h1>
+	</div>
+	<div>
+		<table>
+			<tr>
+				<th>Asking Price</th>
+				<th>Highest User</th>
+				<th>Highest Price</th>
+			</tr>
+			<tr>
+				<td>{{asking_price}}</td>
+				<td>{{highest_user}}</td>
+				<td>{{highest_price}}</td>
+			</tr>
+		</table>
+	</div>
+	<div>
+		<form action='/bid' method="POST">
+			<div>
+				<label>Negotiate Price</label>
+				<input type="text" name="new_price">
+			</div>
+			<div>
+				<input type="submit" value="Send">
+			</div>
+		</form>
+	</div>
+		
+		
+
+</body>
+
+</html>
