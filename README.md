@@ -74,4 +74,4 @@ Go to Database directory `cd Database`
 
 #### Github Tip
 * Push local master to remote branch `git push origin master:<remote branch name>`
-* [Git pull and keep local changes]{https://stackoverflow.com/questions/10414769/git-pull-keeping-local-changes}
+* [Git pull and keep local changes](https://stackoverflow.com/questions/10414769/git-pull-keeping-local-changes)
