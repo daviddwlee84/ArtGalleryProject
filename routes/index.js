@@ -46,6 +46,51 @@ var renderView = function(obj) {
     return view;
 }
 
+/* Artists */
+
+router.get('/Artists', function(req, res, next){
+	connection.query('SELECT * FROM Artist', function(err, result, fields) {
+		if (err) throw err;
+		res.render('artists', {data: renderArtist(result)});
+	});
+});
+
+var renderArtist = function(obj) {
+    if (Object.prototype.toString.call(obj) !== '[object Array]')
+        throw new Error('invalid data type, expected an array');
+    var view = '';
+
+	view += `<div>`
+	view += `<table>
+				<thead>
+					<th>A_SSN</th>
+					<th>A_Name</th>
+					<th>A_Address</th>
+					<th>A_Phone</th>
+					<th>A_Usually_Type</th>
+					<th>A_Usually_Medium</th>
+					<th>A_Usually_Style</th>
+					<th>A_MoneyEarn_LastYear</th>
+					<th>A_MoneyEarn_ThisYear</th>
+				</thead>
+			<tbody>`
+
+    obj.map((o, i) => {
+        view += `<tr>
+					<td>${o.A_SSN}</td>
+					<td>${o.A_Name}</td>
+					<td>${o.A_Address}</td>
+					<td>${o.A_Phone}</td>
+					<td>${o.A_Usually_Type}</td>
+					<td>${o.A_Usually_Style}</td>
+					<td>${o.A_MoneyEarn_LastYear}</td>
+					<td>${o.A_MoneyEarn_ThisYear}</td>
+				</tr>`
+	});
+
+	view += `</tbody></table></div>`
+    return view;
+}
 
 router.get('/buyIt', function(req, res, next) {
 	
