@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    <h1>Hello {{name}}!</h1>
+    <h1>Hello {{name}}! Welcome to Art Gallery</h1>
     <div>
         <ul>
             <li><a href="/page2">page2</a></li>
@@ -18,24 +18,27 @@
 			<li><a href="/register/">register</a></li>
 		</ul>
     </div>
-    <form action='/login' method="POST">
-        <div>
-            <label>ID:</label>
-            <input type="text" name="id" value="">
-        </div>
-        <div>
-            <label>PASSWORD:</label>
-            <input type="text" name="pwd" value="">
-        </div>
-        <div>
-            <input type="submit" value='go'>
-        </div>
-    </form>
-	<form action='/logout' method="POST">
-		<div>
-			<input type = "submit" value='logout la!!'>
-		</div>
-	</form>
+	<div>
+    	<form action='/login' method="POST">
+    		<label>ID:</label>
+    	    <input type="text" name="id" value=""> &emsp;
+			<label>Password:</label>
+    	    <input type="text" name="pwd" value="">
+    	    <input type="submit" value='signin'>
+    	</form>
+		<form action='/logout' method="POST">
+			<input type = "submit" value='logout'>
+		</form>
+	</div>
+	<div>
+        {{{ data }}}
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script>
+        function sendMe(obj) {
+            location.href = '/buyIt?id=' + obj.id;
+        }
+    </script>
 
 </body>
 
