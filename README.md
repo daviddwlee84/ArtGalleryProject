@@ -7,6 +7,8 @@ The final project of Database Design.
 
  **Database** - MySQL
  
+ [Relational Diagram](https://drive.google.com/file/d/0B0Lm7ZZWUYUJS1AwWTdBM3NYSGs/view?usp=sharing)
+ 
  **Webserver** - Node.js + Express
 
 
@@ -19,6 +21,17 @@ The final project of Database Design.
 ## Start Server
 `nodemon` in the main directory
 
+## Default Database Setup
+
+Go to Database directory `cd Database`
+
+1. Create Database `node Create_DB.js`
+1. Create Tables `node Create_Table.js`
+1. Insert testing data (optional)
+	1. `node Insert_Console.js`
+	1. Copy paste the "*.txt" filenames listed in *Index.txt*
+	1. After finishing. Terminate it by Ctrl + C
+
 ## Todo List
 ### Server
 - [X] Basic Login System
@@ -29,9 +42,10 @@ The final project of Database Design.
 - [X] User Register Page
 
 	### Reports
-	- [ ] Unsold Work Page (including bargain mechanism)
-	- [ ] List All Artist Page
-	- [ ] List All Customer Page
+	- [X] Unsold Work Page
+		- [ ] Bargain mechanism
+	- [X] List All Artist Page
+	- [X] List All Customer Page
 
 
 	### Receipt
@@ -40,14 +54,14 @@ The final project of Database Design.
 	- [ ] Works for Sale Upload Page
 	
 		#### User 
-		- [ ] Artist Report Page
-		- [ ] Salesperson Page (show the Performance)
+		- [X] Artist Report Page
+		- [X] Salesperson Page (show the Performance)
 	
 
 
 ## Contributor
-* David Lee
-* Jimmy Zhang
+* David Lee - Website Front-end and Back-end
+* Jimmy Zhang - Database
 
 ## Memo
 ### Github md File
@@ -60,4 +74,4 @@ The final project of Database Design.
 
 #### Github Tip
 * Push local master to remote branch `git push origin master:<remote branch name>`
-* [Git pull and keep local changes]{https://stackoverflow.com/questions/10414769/git-pull-keeping-local-changes}
+* [Git pull and keep local changes](https://stackoverflow.com/questions/10414769/git-pull-keeping-local-changes)

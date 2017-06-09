@@ -46,6 +46,179 @@ var renderView = function(obj) {
     return view;
 }
 
+/* Artists */
+
+router.get('/Artists', function(req, res, next){
+	connection.query('SELECT * FROM Artist', function(err, result, fields) {
+		if (err) throw err;
+		res.render('artists', {title : "Artists", data: renderArtist(result)});
+	});
+});
+
+var renderArtist = function(obj) {
+    if (Object.prototype.toString.call(obj) !== '[object Array]')
+        throw new Error('invalid data type, expected an array');
+    var view = '';
+
+	view += `<div>`
+	view += `<table>
+				<thead>
+					<th>A_SSN</th>
+					<th>A_Name</th>
+					<th>A_Address</th>
+					<th>A_Phone</th>
+					<th>A_Usually_Type</th>
+					<th>A_Usually_Medium</th>
+					<th>A_Usually_Style</th>
+					<th>A_MoneyEarn_LastYear</th>
+					<th>A_MoneyEarn_ThisYear</th>
+				</thead>
+			<tbody>`
+
+    obj.map((o, i) => {
+        view += `<tr>
+					<td>${o.A_SSN}</td>
+					<td>${o.A_Name}</td>
+					<td>${o.A_Address}</td>
+					<td>${o.A_Phone}</td>
+					<td>${o.A_Usually_Type}</td>
+					<td>${o.A_Usually_Medium}</td>
+					<td>${o.A_Usually_Style}</td>
+					<td>${o.A_MoneyEarn_LastYear}</td>
+					<td>${o.A_MoneyEarn_ThisYear}</td>
+				</tr>`
+	});
+
+	view += `</tbody></table></div>`
+    return view;
+}
+
+/* Require 5 Customer */
+
+router.get('/Customers', function(req, res, next){
+	connection.query('SELECT U_Name, U_Address, U_Phone, U_MoneyBuy_LastYear, U_MoneyBuy_ThisYear FROM User ORDER BY U_Name ASC', function(err, result, fields) {
+		if (err) throw err;
+		res.render('customer', {title: "Customer", data: renderCustomer(result)});
+	});
+});
+
+var renderCustomer = function(obj) {
+    if (Object.prototype.toString.call(obj) !== '[object Array]')
+        throw new Error('invalid data type, expected an array');
+    var view = '';
+
+	view += `<div>`
+	view += `<table>
+				<thead>
+					<th>Name</th>
+					<th>U_Address</th>
+					<th>U_Phone</th>
+					<th>U_MoneyBuy_LastYear</th>
+					<th>U_MoneyBuy_ThisYear</th>
+				</thead>
+			<tbody>`
+
+    obj.map((o, i) => {
+        view += `<tr>
+					<td>${o.U_Name}</td>
+					<td>${o.U_Address}</td>
+					<td>${o.U_Phone}</td>
+					<td>${o.U_MoneyBuy_LastYear}</td>
+					<td>${o.U_MoneyBuy_ThisYear}</td>
+				</tr>`
+	});
+
+	view += `</tbody></table></div>`
+    return view;
+}
+
+
+/* Require 9 list artist report */
+
+router.get('/ArtistsReport', function(req, res, next){
+	connection.query('SELECT * FROM require9', function(err, result, fields) {
+		if (err) throw err;
+		res.render('artists_report', {title: "Artists Report", data: renderArtistReport(result)});
+	});
+});
+
+var renderArtistReport = function(obj) {
+    if (Object.prototype.toString.call(obj) !== '[object Array]')
+        throw new Error('invalid data type, expected an array');
+    var view = '';
+
+	view += `<div>`
+	view += `<table>
+				<thead>
+					<th>Artist</th>
+					<th>Title</th>
+					<th>Type</th>
+					<th>Medium</th>
+					<th>Style</th>
+					<th>Asking_Price</th>
+					<th>Selling_Price</th>
+					<th>Date_of_sold</th>
+				</thead>
+			<tbody>`
+
+    obj.map((o, i) => {
+        view += `<tr>
+					<td>${o.Artist}</td>
+					<td>${o.Title}</td>
+					<td>${o.Type}</td>
+					<td>${o.Medium}</td>
+					<td>${o.Style}</td>
+					<td>${o.Asking_Price}</td>
+					<td>${o.Selling_Price}</td>
+					<td>${o.Data_of_sold}</td>
+				</tr>`
+	});
+
+	view += `</tbody></table></div>`
+    return view;
+}
+
+/* require 11 Salesperson Performance Report */
+
+router.get('/SalespersonPerformanceReport', function(req, res, next){
+	connection.query('SELECT * FROM require11', function(err, result, fields) {
+		if (err) throw err;
+		res.render('salesperson_performance_report', {title : "Salesperson Performance Report", data: renderSPR(result)});
+	});
+});
+
+var renderSPR = function(obj) {
+    if (Object.prototype.toString.call(obj) !== '[object Array]')
+        throw new Error('invalid data type, expected an array');
+    var view = '';
+
+	view += `<div>`
+	view += `<table>
+				<thead>
+					<th>SalesPerson</th>
+					<th>Title</th>
+					<th>Artist</th>
+					<th>Asking_Price</th>
+					<th>Selling_Price</th>
+					<th>Date_of_sold</th>
+			<tbody>`
+
+    obj.map((o, i) => {
+        view += `<tr>
+					<td>${o.SalesPerson}</td>
+					<td>${o.Title}</td>
+					<td>${o.Artist}</td>
+					<td>${o.Asking_Price}</td>
+					<td>${o.Selling_Price}</td>
+					<td>${o.Date_of_sold}</td>
+				</tr>`
+	});
+
+	view += `</tbody></table></div>`
+    return view;
+}
+
+
 
 router.get('/buyIt', function(req, res, next) {
 	

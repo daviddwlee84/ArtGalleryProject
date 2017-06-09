@@ -1,0 +1,4 @@
+INSERT INTO Salesperson(S_SSN, S_Name, S_Address, S_Phone) Value (174927398, "Joooon", "Tainan, Diwo street", "0922749378")
+INSERT INTO Salesperson(S_SSN, S_Name, S_Address, S_Phone) Value (298749307, "Hiiiya", "Chiayi, dhik street", "0969749378")
+INSERT INTO Salesperson(S_SSN, S_Name, S_Address, S_Phone) Value (909277937, "Rrrika", "Taipei, dhoe street", "0922759697")
+INSERT INTO Salesperson(S_SSN, S_Name, S_Address, S_Phone) Value (368209459, "Daaani", "Tachon, idhi street", "0914549368")
